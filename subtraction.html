@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Subtract Two Numbers</title>
+</head>
+<body>
+  <h2>Subtract Two Numbers</h2>
+
+  <label for="a">First number (A):</label>
+  <input type="number" id="a" placeholder="Enter A" /> <br /><br />
+
+  <label for="b">Second number (B):</label>
+  <input type="number" id="b" placeholder="Enter B" /> <br /><br />
+
+  <button id="subtractBtn">Calculate A − B</button>
+
+  <h3>Result: <span id="result">—</span></h3>
+
+  <script>
+    document.getElementById("subtractBtn").addEventListener("click", function () {
+      const a = parseFloat(document.getElementById("a").value);
+      const b = parseFloat(document.getElementById("b").value);
+
+      if (isNaN(a) || isNaN(b)) {
+        document.getElementById("result").textContent = "Please enter both numbers.";
+        return;
+      }
+
+      const difference = a - b; // A − B
+      document.getElementById("result").textContent = difference;
+    });
+  </script>
+  <h2> git subttraction of two numbers</h2>
+</body>
+</html>
